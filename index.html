@@ -1,3 +1,122 @@
-<html>
-  <h1> Hello World </h1> 
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        Author: Dominic Varchetto
+        Final Project - Programming 101
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <title> Programming 101 </title>
+        <link rel="stylesheet" href="Programming101.css">
+    </head>
+
+
+    <body>
+        <h1 style="text-align:center"> Programming 101 - Tips and Tricks to Succeed</h1>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openArea(event, 'Getting Started')" id="defaultOpen">Getting Started</button>
+            <button class="tablinks" onclick="openArea(event, 'HTML')"> HTML </button>
+            <button class="tablinks" onclick="openArea(event, 'CSS')"> CSS </button>
+            <button class="tablinks" onclick="openArea(event, 'JavaScript')"> JavaScript</button>
+            <button class="tablinks" onclick="openArea(event, 'Python')"> Python</button>
+            <button class="tablinks" onclick="openArea(event, 'Help / Screenshots')"> Help / Screenshots</button>
+        </div>
+
+
+
+
+    <div id="Getting Started" class="tabcontent">
+        <br>
+        <p> Hello, my name is Dominic Varchetto and I'm a senior here at Lewis University. I have 
+            created this webpage called Programming 101 to help students who aren't familiar with coding
+            and who don't know much. I myself wasn't familiar with coding and I didn't code a day
+            in my life before this class. Now I feel like I better understand the world of coding and
+            I want to share some information about the different languages learned in this course, but also
+            some tips and tricks that I was provided when I begun my journey. I hope you find this 
+            webpage useful and helpful as you start your journey into programming. 
+        </p>
+        <h2> Resources to start: </h2>
+        <ul style="list-style-type: square;">
+            <li> <a href= "https://code.visualstudio.com/"> Visual Studio Code </a></li>
+            <li> <a href= "https://github.com/"> GitHub</a></li>
+            <li> <a href="https://git-scm.com/"> Git</a></li>
+            <li> <a href="https://www.python.org/"> Python</a></li>
+            <li> <a href="https://www.w3schools.com/js/"> W3 Schools</a></li>
+            <li> File Explorer - Windows, Finder - Mac</li>
+            <li> Powershell - Windows, Terminal - Mac</li>
+            <li> Any screenshot tool</li>
+        </ul>
+        
+    </div> 
+
+    <div id="HTML" class="tabcontent">
+        <h2> What is HTML?</h2>
+        <p> HTML is the standard markup language for documents that are designed to be displayed
+            in a web browser. It stands for HyperText Markup Language. You will use HTML when creating
+            webpages like "Getting to Know Each Other" and "Hello World". It is very important that
+            you set the document up correctly when in VS Code. </p>
+        <h2> HTML Code Starter: </h2>
+        <p> Below is how you should set up your VS Code to have it as an HTML file:</p>
+        <br>
+        <br>
+        <picture id="Image">
+        <img src="HTMLStart.JPG" alt="Setup Image" style="width:500px">
+        </picture>
+        <button onclick="toggle(this)">Hide picture</button>
+        <p> Make sure to save the file as .HTML</p>
+
+        <h2> Explanation of each line of code: </h2>
+        <li> !DOCTYPE HTML - what you want the document to be.  </li>
+        <li> HTML lang=en - specifies the language of the elements content. EN = English. </li>
+        <li> Meta charset = "UTF-8" - used to specify the character encoding used in an HTML document.
+            The HTML5 encourages developers to use the UTF-8 character set which covers almost all
+            of the characters and symbols in the world. </li>
+        <li> Title - what the web address will be titled</li>
+        <li> H1 - heading of the section.</li>
+        <li> p - paragraph under the heading.</li>
+
+        <h2> Examples of H1 and paragraph</h2>
+        <img src="HTMLExplanation.jpg" alt="Example" style="width:500px">
+        <img src="HTMLExplanationCode.jpg" alt="Code" style = width:500px">
+    
+        <p> As you can see, the first screenshot is of the heading and paragraph. The heading is much
+            larger than the paragraph. The second screenshot is the code you would put to make the heading
+            and paragraph work. 
+        </p>
+    </div>
+
+
+<script>
+    function openArea(evt, area) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) { 
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks")
+        for (i = 0; i < tabcontent.length; i++) { 
+            tablinks[i].className = tablinks[i].className.replace("active", "");
+        }
+         document.getElementById(area).style.display="block";
+         evt.currentTarget.className += "active";
+        }
+
+    document.getElementById("defaultOpen").click();
+    
+let toggle = button => {
+    let element = document.getElementById("Image");
+    let hidden = element.getAttribute("hidden");
+    
+    if (hidden) {
+       element.removeAttribute("hidden");
+       button.innerText = "Hide picture";
+    } else {
+       element.setAttribute("hidden", "hidden");
+       button.innerText = "Show picture";
+    }
+  }
+</script>
+
+</body> 
 </html>
