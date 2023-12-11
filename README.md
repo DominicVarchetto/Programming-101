@@ -10,5 +10,7 @@ Dominic Varchetto [email:dominicmvarchetto@lewisu.edu](mailto:dominicmvarchetto@
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details. 
 
-
-
+## Credits
+Eric Pogue for the different project we worked on this semester.
+W3 Schools 
+HTML CheatSheet for the inspiration. 
